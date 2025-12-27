@@ -1,0 +1,16 @@
+# Node modules (if you add any later)
+node_modules/
+
+# Environment variables (if you create a .env file)
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo

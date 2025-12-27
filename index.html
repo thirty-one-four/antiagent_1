@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Questions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <canvas id="starCanvas"></canvas>
+
+    <main class="container">
+        <div class="content">
+            <h1>Ask a question</h1>
+
+            <form id="questionForm">
+                <div class="input-line-container">
+                    <input type="text" id="question" placeholder="Enter your question here..." autocomplete="off"
+                        required>
+                    <div class="underline"></div>
+                </div>
+                <!-- Hidden name field for simplicity if user just wants 'enter question', defaulting to Anon in JS -->
+            </form>
+
+            <div id="statusMessage" class="hidden"></div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
