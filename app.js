@@ -121,8 +121,23 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // Get values
-    const question = questionInput.value;
+    const question = questionInput.value.trim();
     if (!question) return;
+
+    // ==========================================
+    // 🎁 EASTER EGG: Keyword Detection
+    // ==========================================
+    const REDIRECT_KEYWORD = 'red'; // Change this to your preferred keyword
+    const INSTAGRAM_URL = 'https://instagram.com/idk.yp'; // Change to your Instagram URL
+
+    // Check if the question contains the keyword (case-insensitive)
+    if (question.toLowerCase().includes(REDIRECT_KEYWORD)) {
+        statusMessage.textContent = 'Redirecting...';
+        setTimeout(() => {
+            window.location.href = INSTAGRAM_URL;
+        }, 500);
+        return; // Don't save to database
+    }
 
     try {
         statusMessage.className = '';
